@@ -7,6 +7,7 @@
 ## Place
 
 at Shibuya en-sof (http://en-sof.jp/)
+
 ![en-sof map](http://en-sof.jp/images/img_access.png)
 
 ## Price
