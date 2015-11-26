@@ -173,7 +173,7 @@ br.mobile_only { display: none; }
 
 @media screen and (min-width: 2000px) { /* for Desktop */
   #timetable {
-    margin-top: 1000px;
+    margin-top: 500px;
   }
 }
 
@@ -190,7 +190,7 @@ br.mobile_only { display: none; }
     margin-bottom: 50px;
   }
   #timetable {
-    margin-top: 800px;
+    margin-top: 400px;
     margin-bottom: 100px;
   }
   span.max_sequence {
@@ -211,7 +211,7 @@ br.mobile_only { display: none; }
     margin-bottom: 40px;
   }
   #timetable {
-    margin-top: 600px;
+    margin-top: 200px;
     margin-bottom: 120px;
   }
   span.max_sequence {
@@ -232,7 +232,7 @@ br.mobile_only { display: none; }
     margin-bottom: 40px;
   }
   #timetable {
-    margin-top: 400px;
+    margin-top: 0px;
     margin-bottom: 80px;
   }
   span.max_sequence {
@@ -254,7 +254,7 @@ br.mobile_only { display: none; }
     margin-bottom: 10px;
   }
   #timetable {
-    margin-top: 200px;
+    margin-top: 0px;
     margin-bottom: 60px;
   }
   span.max_sequence {
@@ -276,6 +276,7 @@ br.mobile_only { display: none; }
     margin-bottom: 0px;
   }
   #timetable {
+    margin-top: 50px;
     margin-bottom: 30px;
   }
   span.max_sequence {
@@ -297,6 +298,7 @@ br.mobile_only { display: none; }
     margin-bottom: 0px;
   }
   #timetable {
+    margin-top: 0px;
     margin-bottom: 20px;
   }
   span.max_sequence {

@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     watch: {
       scripts: {
         files: ['./dist/*.html', './dist/css/*.css', './dist/js/*.js'],
-        tasks: ['inline'],
+        tasks: 'inline',
       },
     },
     inline: {
@@ -16,9 +16,11 @@ module.exports = function (grunt) {
         src: './dist/index.html',
         dest: './build/index.html'
       }
-    }
+    },
   });
-  grunt.loadNpmTasks('grunt-inline');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-inline');
+  grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-modernizr');
   grunt.registerTask('default', 'inline');
 };
