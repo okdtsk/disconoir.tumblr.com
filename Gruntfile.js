@@ -1,18 +1,24 @@
 module.exports = function (grunt) {
 
   grunt.initConfig({
+    watch: {
+      scripts: {
+        files: ['./dist/*.html', './dist/css/*.css', './dist/js/*.js'],
+        tasks: ['inline'],
+      },
+    },
     inline: {
       dist: {
         options:{
           cssmin: true,
           uglify: true,
         },
-        src: './dist/index.html', // インライン化したいファイルのパス
-        dest: './build/index.html'  // 出力ファイルのパス
+        src: './dist/index.html',
+        dest: './build/index.html'
       }
     }
   });
-  grunt.loadNpmTasks('grunt-inline'); // grunt-inlineの取り込み
-  grunt.registerTask('default', 'inline'); // defaultタスクに設定
-
+  grunt.loadNpmTasks('grunt-inline');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('default', 'inline');
 };
