@@ -20,7 +20,5 @@ module.exports = function (grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-inline');
-  grunt.loadNpmTasks('grunt-bower-task');
-  grunt.loadNpmTasks('grunt-modernizr');
   grunt.registerTask('default', 'inline');
 };
