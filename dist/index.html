@@ -10,16 +10,16 @@
     <meta property="og:title" content="{Title}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{BlogURL}" />
-    <meta property="og:image" content="{image:FacebookOGImage}" />
+    <meta property="og:image" content="{image:Facebook OG Image}" />
     <meta property="og:description" content="{MetaDescription}" />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:site_name" content="{Title}" />
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
-    <link rel="apple-touch-icon" href="{image:MobileIcon}">
+    <link rel="apple-touch-icon" href="{image:Mobile Icon}">
     <meta name="apple-mobile-web-app-title" content="{Title}" />
-    <link rel="icon" href="{image:FaviconPng}" type="image/png"/>
+    <link rel="icon" href="{image:Favicon Png}" type="image/png"/>
 
     <link rel="stylesheet" href="css/normalize.css?__inline=true">
     <link rel="stylesheet" href="css/main.css?__inline=true">
@@ -28,13 +28,22 @@
     <script type="text/javascript" src="js/loading.js?__inline=true"></script>
 
     <!-- Tumblr -->
-    <meta name="image:TitleLogo" content="{TitleLogo}"/>
-    <meta name="image:BackgroundFull" content="{BackgroundFull}"/>
-    <meta name="image:BackgroundMobile" content="{BackgroundMobile}"/>
-    <meta name="image:FacebookOGImage" content="{FacebookOGImage}"/>
-    <meta name="image:MobileIcon" content="{MobileIcon}"/>
-    <meta name="image:FaviconPng" content="{FaviconPng}"/>
+    <meta name="image:Title Logo" content=""/>
+    <meta name="image:Background Full" content=""/>
+    <meta name="image:Background Mobile" content=""/>
+    <meta name="image:Facebook OG Image" content=""/>
+    <meta name="image:Mobile Icon" content=""/>
+    <meta name="image:Favicon Png" content=""/>
+    <meta name="image:Timetable Full" content="{TimetableFull}"/>
+    <meta name="image:Timetable Transparent" content=""/>
+    <meta name="text:Event Date" content=""/>
+    <meta name="text:Event Time" content=""/>
+    <meta name="text:Event Price" content=""/>
+    <meta name="text:Event GuestDJ" content=""/>
+    <meta name="text:Event ResidentDJ" content=""/>
+    <meta name="text:Event ResidentVJ" content=""/>
     <meta name="color:TextColor" content="{TextColor}" />
+    <meta name="color:TextBlurColor" content="{TextBlurColor}" />
     <style type="text/css">
       {CustomCSS}
     </style>
@@ -61,57 +70,39 @@
       <section class="glow">
         <a href="https://twitter.com/okdtsk/status/181117907219120128" target="_blank">
           <h1>
-            <img src="{image:TitleLogo}" alt="{Title}" id="title_logo" class="fullwidth" /> <!-- なにみとんねん (´・ω・｀) このハゲが -->
+            <img src="{image:Title Logo}" alt="{Title}" id="title_logo" class="fullwidth" /> <!-- なにみとんねん (´・ω・｀) このハゲが -->
           </h1>
         </a>
       </section>
       <section class="glow">
-        <p>20151212 &lt;sat&gt;</p>
-        <p>16:00-22:00</p>
+        <p>{text:Event Date}</p>
+        <p>{text:Event Time}</p>
       </section>
       <section class="glow">
           <p><a href="http://en-sof.jp/" target="_blank" class="dashed">EN-SOF TOKYO</a></p>
           <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">Shibuya Dogenzaka 2-23-13</a></p>
-          <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">SHIBUYA DELI TOWER B1F</a></p>
+          <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">HIBUYA DELI TOWER B1F</a></p>
       </section>
       <section class="glow">
-        <ul>
-          <li>
-            <p>before 18:00</p>
-            <p>&yen;1000</p>
-          </li>
-          <li>
-            <p>after 18:00</p>
-            <p>&yen;2000 w/ 1d</p>
-          </li>
-        </ul>
+        {text:Event Price}
       </section>
       <section class="glow">
         <p>-GUESTDJ-</p>
-        <ul>
-          <li><a href="https://twitter.com/Xi_DJ" target="_blank" class="dashed">Xi</a></li>
-          <li><a href="https://twitter.com/KTAGRANT" target="_blank" class="dashed">KTAGRANT</a></li>
-          <li><a href="https://twitter.com/Lifecut0120" target="_blank" class="dashed">メイリオ</a></li>
-          <li><a href="https://twitter.com/ot_310" target="_blank" class="dashed">ot</a></li>
-        </ul>
+        {text:Event GuestDJ}
       </section>
       <section class="glow">
         <p>-DJ-</p>
-        <ul>
-          <li><a href="https://twitter.com/mynameisknc" target="_blank" class="dashed">knc//</a></li>
-          <li><a href="https://twitter.com/okdtsk" target="_blank" class="dashed">okdtsk</a></li>
-          <li><a href="https://twitter.com/shoz_" target="_blank" class="dashed">shoz_</a></li>
-        </ul>
+        {text:Event ResidentDJ}
       </section>
       <section class="glow">
         <p>-VJ-</p>
-        <ul>
-          <li><a href="https://twitter.com/sd_pajero" class="dashed">パジェロ</a></li>
-        </ul>
+        {text:Event ResidentVJ}
       </section>
       <section id="timetable">
         <!-- TT -->
-        Comming soon.
+        {block:IfTimetableFull}<a href="{image:Timetable Full}" target="_blank">{/block:IfTimetableFull}
+        <img src="{image:Timetable Transparent}" alt="Timetable" id="timetable_img" class="fullwidth" />
+        {block:IfTimetableFull}</a>{/block:IfTimetableFull}
       </section>
     </div>
 
