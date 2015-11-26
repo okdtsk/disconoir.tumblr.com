@@ -245,7 +245,7 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 750px) { /* for iPhone6 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:BackgroundFull}');
+    background-image: url('../{image:BackgroundMobile}');
     font-size: 12px;
   }
   #contents {
@@ -267,7 +267,7 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 640px) { /* for iPhone5, 6 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:BackgroundFull}');
+    background-image: url('../{image:BackgroundMobile}');
     letter-spacing: 6px;
   }
   #contents {
@@ -289,7 +289,7 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 320px) { /* for iPhone4 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:BackgroundFull}');
+    background-image: url('../{image:BackgroundMobile}');
     letter-spacing: 6px;
   }
   #contents {
