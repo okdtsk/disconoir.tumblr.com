@@ -165,6 +165,10 @@ section {
   width: 100%;
 }
 
+.maxfullwidth {
+  max-width: 100%;
+}
+
 #timetable_img {
   max-width: 640px;
 }
@@ -172,15 +176,12 @@ section {
 br.mobile_only { display: none; }
 
 @media screen and (min-width: 2000px) { /* for Desktop */
-  #timetable {
-    margin-top: 500px;
-  }
-}
-
-@media screen and (min-width: 1281px) { /* for Desktop */
   body {
+    font-size: 24px;
+  }
+  #contentswrapper {
     background-image: url('../{image:Background Full}');
-    font-size: 18px;
+    width: 100%;
   }
   #contents {
     width: 980px;
@@ -190,8 +191,32 @@ br.mobile_only { display: none; }
     margin-bottom: 50px;
   }
   #timetable {
-    margin-top: 400px;
-    margin-bottom: 100px;
+    margin-top: 0px;
+    margin-bottom: 1000px;
+  }
+  span.max_sequence {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1281px) { /* for Desktop */
+  body {
+    font-size: 20px;
+  }
+  #contentswrapper {
+    background-image: url('../{image:Background Full}');
+    width: 100%;
+  }
+  #contents {
+    width: 980px;
+  }
+  #title_logo {
+    margin-top: 55px;
+    margin-bottom: 50px;
+  }
+  #timetable {
+    margin-top: 0px;
+    margin-bottom: 1000px;
   }
   span.max_sequence {
     font-size: 28px;
@@ -200,29 +225,11 @@ br.mobile_only { display: none; }
 
 @media screen and (max-width: 1280px) { /* for iPad and Tablet */
   body {
+    font-size: 18px;
+  }
+  #contentswrapper {
     background-image: url('../{image:Background Full}');
-    font-size: 16px;
-  }
-  #contents {
-    width: 640px;
-  }
-  #title_logo {
-    margin-top: 55px;
-    margin-bottom: 40px;
-  }
-  #timetable {
-    margin-top: 200px;
-    margin-bottom: 120px;
-  }
-  span.max_sequence {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 1080px) { /* for iPad and Tablet */
-  body {
-    background-image: url('../{image:Background Full}');
-    font-size: 16px;
+    width: 100%;
   }
   #contents {
     width: 640px;
@@ -233,7 +240,31 @@ br.mobile_only { display: none; }
   }
   #timetable {
     margin-top: 0px;
-    margin-bottom: 80px;
+    margin-bottom: 780px;
+  }
+  span.max_sequence {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1080px) { /* for iPad and Tablet */
+  body {
+    font-size: 16px;
+  }
+  #contentswrapper {
+    background-image: url('../{image:Background Full}');
+    width: 100%;
+  }
+  #contents {
+    width: 640px;
+  }
+  #title_logo {
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+  #timetable {
+    margin-top: 0px;
+    margin-bottom: 680px;
   }
   span.max_sequence {
     font-size: 28px;
@@ -243,8 +274,11 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 750px) { /* for iPhone6 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:Background Mobile}');
     font-size: 12px;
+  }
+  #contentswrapper {
+    background-image: url('../{image:Background Mobile}');
+    width: 100%;
   }
   #contents {
     width: 640px;
@@ -255,7 +289,7 @@ br.mobile_only { display: none; }
   }
   #timetable {
     margin-top: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 460px;
   }
   span.max_sequence {
     font-size: 22px;
@@ -265,8 +299,11 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 640px) { /* for iPhone5, 6 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:Background Mobile}');
     letter-spacing: 6px;
+  }
+  #contentswrapper {
+    background-image: url('../{image:Background Mobile}');
+    width: 100%;
   }
   #contents {
     width: 320px;
@@ -277,7 +314,7 @@ br.mobile_only { display: none; }
   }
   #timetable {
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 430px;
   }
   span.max_sequence {
     font-size: 18px;
@@ -287,8 +324,11 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 320px) { /* for iPhone4 */
   br.mobile_only { display: inline; }
   body {
-    background-image: url('../{image:Background Mobile}');
     letter-spacing: 6px;
+  }
+  #contentswrapper {
+    background-image: url('../{image:Background Mobile}');
+    width: 100%;
   }
   #contents {
     width: 280px;
@@ -299,7 +339,7 @@ br.mobile_only { display: none; }
   }
   #timetable {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 420px;
   }
   span.max_sequence {
     font-size: 16px;

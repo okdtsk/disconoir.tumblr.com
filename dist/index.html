@@ -32,15 +32,19 @@
     <link rel="stylesheet" href="css/normalize.css?__inline=true" />
     <link rel="stylesheet" href="css/main.css?__inline=true" />
     <script src="//fast.eager.io/l3hb3t9xjM.js"></script>
+    <script type="text/javascript" src="http://codysherman.tumblr.com/tools/infinite-scrolling/code"></script>
 
     <!-- Tumblr -->
     <meta name="image:Title Logo" content=""/>
+    <meta name="image:Header Contents" content="{HeaderContents}"/>
+    <meta name="text:Header Text" content=""/>
     <meta name="image:Background Full" content=""/>
     <meta name="image:Background Mobile" content=""/>
     <meta name="image:Facebook OG Image" content=""/>
     <meta name="image:Twitter OG Image" content=""/>
     <meta name="image:Mobile Icon" content=""/>
     <meta name="image:Favicon Png" content=""/>
+    <meta name="if:Timetable" content="0"/>
     <meta name="image:Timetable Full" content="{TimetableFull}"/>
     <meta name="image:Timetable Transparent" content=""/>
     <meta name="text:Event Date" content=""/>
@@ -87,44 +91,138 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="contents">
-      <section class="glow">
-        <a href="https://twitter.com/okdtsk/status/181117907219120128" target="_blank">
-          <h1>
-            <img src="{image:Title Logo}" alt="{Title}" id="title_logo" class="fullwidth" /> <!-- なにみとんねん (´・ω・｀) このハゲが -->
-          </h1>
-        </a>
-      </section>
-      <section class="glow">
-        <p>{text:Event Date}</p>
-        <p>{text:Event Time}</p>
-      </section>
-      <section class="glow">
-          <p><a href="http://en-sof.jp/" target="_blank" class="dashed">EN-SOF TOKYO</a></p>
-          <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">Shibuya Dogenzaka 2-23-13</a></p>
-          <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">SHIBUYA DELI TOWER B1F</a></p>
-      </section>
-      <section class="glow">
-        {text:Event Price}
-      </section>
-      <section class="glow">
-        <p>-GUESTDJ-</p>
-        {text:Event GuestDJ}
-      </section>
-      <section class="glow">
-        <p>-DJ-</p>
-        {text:Event ResidentDJ}
-      </section>
-      <section class="glow">
-        <p>-VJ-</p>
-        {text:Event ResidentVJ}
-      </section>
-      <section id="timetable">
-        <!-- TT -->
-        {block:IfTimetableFull}<a href="{image:Timetable Full}" target="_blank">{/block:IfTimetableFull}
-        <img src="{image:Timetable Transparent}" alt="Timetable" id="timetable_img" class="fullwidth" />
-        {block:IfTimetableFull}</a>{/block:IfTimetableFull}
-      </section>
+    <div id="contentswrapper">
+      <div id="contents">
+        <section class="glow">
+          <a href="https://twitter.com/okdtsk/status/181117907219120128" target="_blank">
+            <h1>
+              <img src="{image:Title Logo}" alt="{Title}" id="title_logo" class="fullwidth" /> <!-- なにみとんねん (´・ω・｀) このハゲが -->
+            </h1>
+          </a>
+        </section>
+        <section id="headercontents" class="glow">
+          <img src="{image:Header Contents}" alt="DISCONOIR!!!" class="maxfullwidth" />
+          {block:IfHeaderText}
+            <div>
+              {text:Header Text}
+            </div>
+          {/block:IfHeaderText}
+        </section>
+        <section class="glow">
+          <p>{text:Event Date}</p>
+          <p>{text:Event Time}</p>
+        </section>
+        <section class="glow">
+            <p><a href="http://en-sof.jp/" target="_blank" class="dashed">EN-SOF TOKYO</a></p>
+            <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">Shibuya Dogenzaka 2-23-13</a></p>
+            <p><a href="https://www.google.co.jp/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%822-23-13&ie=UTF8&gl=jp&z=16&brcurrent=3,0x60188caa2ae0e549:0xa3300b09ef1b2d35,0,0x60188caa2b5b6a4f:0x12864887b0610c79" target="_blank" class="dashed">SHIBUYA DELI TOWER B1F</a></p>
+        </section>
+        <section class="glow">
+          {text:Event Price}
+        </section>
+        <section class="glow">
+          <p>-GUESTDJ-</p>
+          {text:Event GuestDJ}
+        </section>
+        <section class="glow">
+          <p>-DJ-</p>
+          {text:Event ResidentDJ}
+        </section>
+        <section class="glow">
+          <p>-VJ-</p>
+          {text:Event ResidentVJ}
+        </section>
+        <section id="timetable">
+          {block:IfTimetable}
+            <!-- TT -->
+            <a href="{image:Timetable Full}" target="_blank">
+              <img src="{image:Timetable Transparent}" alt="Timetable" id="timetable_img" class="fullwidth" />
+            </a>
+          {/block:IfTimetable}
+        </section>
+      </div>
     </div>
+
+
+
+    <ol id="posts">
+<div class = "autopagerize_page_element" >
+    {block:Posts}{block:Text}
+            <li class="post text">
+                {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}{Body}
+            </li>
+        {/block:Text}{block:Photo}
+            <li class="post photo">
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                {block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+        {/block:Photo}{block:Panorama}
+            <li class="post panorama">
+                {LinkOpenTag}
+                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                {LinkCloseTag}{block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+        {/block:Panorama}{block:Photoset}
+            <li class="post photoset">
+                {Photoset-500}{block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+        {/block:Photoset}{block:Quote}
+            <li class="post quote">
+                "{Quote}"
+
+                {block:Source}
+                    <div class="source">{Source}</div>
+                {/block:Source}
+            </li>
+        {/block:Quote}{block:Link}
+            <li class="post link">
+                <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                {block:Description}
+                    <div class="description">{Description}</div>
+                {/block:Description}
+            </li>
+        {/block:Link}{block:Chat}
+            <li class="post chat">
+                {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}
+
+                <ul class="chat">
+                    {block:Lines}
+                        <li class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                                <span class="label">{Label}</span>
+                            {/block:Label}{Line}
+                        </li>
+                    {/block:Lines}
+                </ul>
+            </li>
+        {/block:Chat}{block:Video}
+            <li class="post video">
+                {Video-500}{block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+        {/block:Video}{block:Audio}
+            <li class="post audio">
+                {AudioEmbed}{block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+        {/block:Audio}{/block:Posts}
+</div>
+</ol>
+
+
   </body>
 </html>
