@@ -177,10 +177,10 @@ br.mobile_only { display: none; }
 
 @media screen and (min-width: 2000px) { /* for Desktop */
   body {
+    background-image: url('../{image:Background Full}');
     font-size: 24px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Full}');
     width: 100%;
   }
   #contents {
@@ -201,10 +201,10 @@ br.mobile_only { display: none; }
 
 @media screen and (min-width: 1281px) { /* for Desktop */
   body {
+    background-image: url('../{image:Background Full}');
     font-size: 20px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Full}');
     width: 100%;
   }
   #contents {
@@ -225,10 +225,10 @@ br.mobile_only { display: none; }
 
 @media screen and (max-width: 1280px) { /* for iPad and Tablet */
   body {
+    background-image: url('../{image:Background Full}');
     font-size: 18px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Full}');
     width: 100%;
   }
   #contents {
@@ -249,10 +249,10 @@ br.mobile_only { display: none; }
 
 @media screen and (max-width: 1080px) { /* for iPad and Tablet */
   body {
+    background-image: url('../{image:Background Full}');
     font-size: 16px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Full}');
     width: 100%;
   }
   #contents {
@@ -274,10 +274,10 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 750px) { /* for iPhone6 */
   br.mobile_only { display: inline; }
   body {
+    background-image: url('../{image:Background Mobile}');
     font-size: 12px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Mobile}');
     width: 100%;
   }
   #contents {
@@ -299,10 +299,10 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 640px) { /* for iPhone5, 6 */
   br.mobile_only { display: inline; }
   body {
+    background-image: url('../{image:Background Mobile}');
     letter-spacing: 6px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Mobile}');
     width: 100%;
   }
   #contents {
@@ -324,10 +324,10 @@ br.mobile_only { display: none; }
 @media screen and (max-width: 320px) { /* for iPhone4 */
   br.mobile_only { display: inline; }
   body {
+    background-image: url('../{image:Background Mobile}');
     letter-spacing: 6px;
   }
   #contentswrapper {
-    background-image: url('../{image:Background Mobile}');
     width: 100%;
   }
   #contents {
