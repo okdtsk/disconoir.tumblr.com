@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: ['./dist/*.html', './dist/css/*.css', './dist/js/*.js'],
+        files: ['./src/*.html', './src/css/*.css', './src/js/*.js'],
         tasks: 'inline',
       },
     },
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
           cssmin: true,
           uglify: true,
         },
-        src: './dist/index.html',
+        src: './src/index.html',
         dest: './build/index.html'
       }
     },
