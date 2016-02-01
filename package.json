@@ -14,5 +14,9 @@
     "copy": "pbcopy ./build/index.html"
   },
   "author": "Tasuku OKUDA",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/okdtsk/disconoir.tumblr.com.git"
+  }
 }
