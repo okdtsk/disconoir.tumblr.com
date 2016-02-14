@@ -29,6 +29,7 @@
     <link rel="icon" href="{image:Favicon Png}" type="image/png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link inline rel="stylesheet" href="css/normalize.css" />
     <link inline rel="stylesheet" href="css/main.css" />
     <script src="//fast.eager.io/l3hb3t9xjM.js"></script>
@@ -90,17 +91,23 @@
             </h1>
           </a>
         </section>
-        <section id="description">
-          {Description}
-        </section>
+        {block:IndexPage}
+          {block:ShowDescription}
+            <section id="description">
+              {Description}
+            </section>
+          {/block:ShowDescription}
+        {/block:IndexPage}
       </header>
 
-      {block:IfCommingUp}
-        <section id="commingup">
-          <h3>Comming Up Event</h3>
-          {text:commingUp}
-        </section>
-      {/block:IfCommingUp}
+      {block:IndexPage}
+        {block:IfCommingUp}
+          <section id="commingup">
+            <h3>Comming Up Event</h3>
+            {text:commingUp}
+          </section>
+        {/block:IfCommingUp}
+      {/block:IndexPage}
 
       <section id="posts" class="autopagerize_page_element">
         {block:Posts}
@@ -115,22 +122,38 @@
                 {Body}
               </div>
               <footer class="postfooter">
-                <div class="social">
-                  {LikeButton}
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
                 </div>
-                <div class="postauther">
-                  by {PostAuthorName}
+                <div class="rightfooter">
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
                 </div>
               </footer>
             </article>
           {/block:Text}
           {block:Photo}
             <article class="photo">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
               <div class="image">
-              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-              {block:HighRes}
-                <br /><a href="{PhotoURL-HighRes}">📷High Res</a>
-              {/block:HighRes}
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                {block:HighRes}
+                  <br /><a href="{PhotoURL-HighRes}">📷High Res</a>
+                {/block:HighRes}
               </div>
               {block:Caption}
                 <div class="caption leftalign">
@@ -138,22 +161,178 @@
                 </div>
               {/block:Caption}
               <footer class="postfooter">
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+                <div class="rightfooter">
+                  {block:Exif}
+                    <div class="exif">
+                      {block:Camera}<span>{Camera}</span>{/block:Camera}<br />
+                      {block:Aperture}<span>{Aperture}</span>{/block:Aperture}
+                      {block:Exposure}<span>{Exposure}</span>{/block:Exposure}
+                      {block:FocalLength}<span>{FocalLength}</span>{/block:FocalLength}
+                    </div>
+                  {/block:Exif}
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
+                </div>
+              </footer>
+            </article>
+          {/block:Photo}
+          {block:Photoset}
+            <article class="photoset">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
+              {block:Photos}
+                <div class="image">
+                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                  {block:HighRes}
+                    <br /><a href="{PhotoURL-HighRes}">📷High Res</a>
+                  {/block:HighRes}
+                </div>
+                {block:Caption}
+                  <div class="caption leftalign">
+                    {Caption}
+                  </div>
+                {/block:Caption}
                 {block:Exif}
                   <div class="exif">
-                    {block:Camera}<span>{Camera}</span>{/block:Camera}
+                    {block:Camera}<span>{Camera}</span>{/block:Camera} <br />
                     {block:Aperture}<span>{Aperture}</span>{/block:Aperture}
                     {block:Exposure}<span>{Exposure}</span>{/block:Exposure}
                     {block:FocalLength}<span>{FocalLength}</span>{/block:FocalLength}
                   </div>
                 {/block:Exif}
-                <div class="postauther">
-                  by {PostAuthorName}
+              {/block:Photos}
+              {block:Caption}
+                {Caption}
+              {/block:Caption}
+              <footer class="postfooter">
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+                {block:HasTags}
+                  <div class="tags">
+                    {block:Tags}
+                      <a href="{TagURL}">{Tag}</a>
+                    {/block:Tags}
+                  </div>
+                {/block:HasTags}
+                <div class="rightfooter">
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
                 </div>
               </footer>
             </article>
-          {/block:Photo}
+          {/block:Photoset}
+          {block:quote}
+            <article class="quote">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
+              <div class="body leftalign">
+                {Quote}
+              </div>
+              <footer class="postfooter">
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+                <div class="rightfooter">
+                  <div class="source">
+                    {block:Source}
+                      via {Source}
+                    {/block:Source}
+                  </div>
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
+                </div>
+              </footer>
+            </article>
+          {/block:quote}
+          {block:link}
+            <article class="link">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
+              {block:Thumbnail}
+                <a href="{URL}" Target}><img src="{Thumbnail}" alt="{Name}"></a>
+              {/block:Thumbnail}
+              {block:Description}
+                <div class="description leftalign">
+                  {Description}
+                </div>
+              {/block:Description}
+              {block:Author}
+                <div class="author leftalign">
+                  {Author}
+                </div>
+              {/block:Author}
+              {block:Excerpt}
+                <div class="excerpt leftalign">
+                  {Excerpt}
+                </div>
+              {/block:Excerpt}
+              <footer class="postfooter">
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
+                </div>
+                <div class="rightfooter">
+                  <div class="source">
+                      via <a href="{URL}" {Target}>{Name}</a>
+                  </div>
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
+                </div>
+              </footer>
+            </article>
+          {/block:link}
           {block:Audio}
             <article class="audio">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
               {block:AudioEmbed}
             	  {AudioEmbed color="white"}
               {/block:AudioEmbed}
@@ -163,22 +342,41 @@
               </div>
               {/block:Caption}
               <footer class="postfooter">
-                <div class="trackinfo">
-                  {block:Artist}<span class="artist">{Artist}</span>{/block:Artist}
-                  {block:Album}<span class="album">{Album}</span>{/block:Album}
-                  {block:TrackName}<span class="trackname">{TrackName}</span>{/block:TrackName}
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
                 </div>
-                <div class="playcount">
-                  {PlayCountWithLabel}
-                </div>
-                <div class="postauther">
-                  by {PostAuthorName}
+                <div class="rightfooter">
+                  <div class="trackinfo">
+                    {block:Artist}<span class="artist">{Artist}</span>{/block:Artist}
+                    {block:Album}<span class="album">{Album}</span>{/block:Album}
+                    {block:TrackName}<span class="trackname">{TrackName}</span>{/block:TrackName}
+                  </div>
+                  <div class="playcount">
+                    {PlayCountWithLabel}
+                  </div>
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
                 </div>
               </footer>
             </article>
           {/block:Audio}
           {block:Video}
             <article class="video">
+              {block:PostSummary}
+                <header>
+                  <h3><a href="{Permalink}">{PostSummary}</a></h3>
+                </header>
+              {/block:PostSummary}
               {Video-700}
               {block:Caption}
                 <div class="caption leftalign">
@@ -186,11 +384,25 @@
                 </div>
               {/block:Caption}
               <footer class="postfooter">
-                <div class="playcount">
-                  {PlayCountWithLabel}
+                <div class="leftfooter">
+                  <div class="buttons">
+                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                  </div>
                 </div>
-                <div class="postauther">
-                  by {PostAuthorName}
+                <div class="rightfooter">
+                  <div class="playcount">
+                    {PlayCountWithLabel}
+                  </div>
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  <div class="postauther">
+                    posted by {PostAuthorName}
+                  </div>
                 </div>
               </footer>
             </article>
