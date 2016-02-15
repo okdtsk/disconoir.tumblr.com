@@ -33,7 +33,6 @@
     <link inline rel="stylesheet" href="css/normalize.css" />
     <link inline rel="stylesheet" href="css/main.css" />
     <script src="//fast.eager.io/l3hb3t9xjM.js"></script>
-    <script type="text/javascript" src="http://codysherman.tumblr.com/tools/infinite-scrolling/code"></script>
 
     <!-- Tumblr -->
     <meta name="image:Title Logo" content="">
@@ -108,7 +107,7 @@
         {/block:IfHeaderText}
       {/block:IndexPage}
 
-      <section id="posts" class="autopagerize_page_element">
+      <section id="posts">
         {block:Posts}
           {block:Text}
             <article class="text">
@@ -122,9 +121,11 @@
               </div>
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   {block:HasTags}
@@ -134,9 +135,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -161,9 +173,11 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   {block:Exif}
@@ -181,9 +195,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -221,21 +246,34 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
-                {block:HasTags}
-                  <div class="tags">
-                    {block:Tags}
-                      <a href="{TagURL}">{Tag}</a>
-                    {/block:Tags}
-                  </div>
-                {/block:HasTags}
                 <div class="rightfooter">
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:HasTags}
+                    <div class="tags">
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -252,9 +290,11 @@
               </div>
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   {block:Source}
@@ -269,9 +309,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -303,9 +354,11 @@
               {/block:Excerpt}
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   <div class="source">
@@ -318,9 +371,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -342,9 +406,11 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   <div class="trackinfo">
@@ -362,9 +428,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>
@@ -384,9 +461,11 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
-                  <div class="buttons">
-                    <a href="{ShortURL}"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
-                  </div>
+                  <ul class="buttons">
+                    <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
+                    <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
+                    <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
+                  </ul>
                 </div>
                 <div class="rightfooter">
                   <div class="playcount">
@@ -399,9 +478,20 @@
                       {/block:Tags}
                     </div>
                   {/block:HasTags}
-                  <div class="postauther">
-                    posted by {PostAuthorName}
-                  </div>
+                  {block:RebloggedFrom}
+                    <div class="rebloginfo">
+                      from <a href="{ReblogRootURL}">{ReblogRootTitle}</a><br />
+                      posted by {ReblogRootName}
+                    </div>
+                    <div class="postauther">
+                      reblogged by {PostAuthorName}
+                    </div>
+                  {/block:RebloggedFrom}
+                  {block:NotReblog}
+                    <div class="postauther">
+                      posted by {PostAuthorName}
+                    </div>
+                  {/block:NotReblog}
                 </div>
               </footer>
             </article>

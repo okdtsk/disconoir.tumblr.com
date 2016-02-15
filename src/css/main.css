@@ -102,6 +102,7 @@ body {
   background-size: 100%;
   text-align: center;
   color: {color:TextColor};
+  text-shadow: 0px 0px 4px rgba({RGBcolor:TextBlurColor}, 1), 0px 0px 2px rgba({RGBcolor:TextBlurColor}, 0.8);
   letter-spacing: 8px;
   font-size: 15px;
   font-family: "Helvetica Neue", 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro';
@@ -150,9 +151,13 @@ a {
     margin-right: 6px;
 }
 
-.glow{
+a.nodashed {
     color: {color:TextColor};
-    text-shadow: 0px 0px 4px rgba({RGBcolor:TextBlurColor}, 1), 0px 0px 2px rgba({RGBcolor:TextBlurColor}, 0.8);
+    text-decoration: none;
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
 }
 
 ul {
@@ -190,11 +195,60 @@ article {
   margin-top: 40px;
 }
 
+article * {
+  max-width: 100%;
+}
+
 article > footer.postfooter {
   font-size: 50%;
   text-align: right;
   margin-top: 20px;
 }
+
+ul.buttons {
+  display: -webkit-box;
+  display: -moz-box;
+}
+
+ul.buttons > li {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  height: 100%;
+}
+
+ul.buttons .glyphicon:hover {
+  color: #ff9999;
+}
+
+.custom-like-button {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+/* class for the Tumblr Like Button iframe */
+.like_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 10;
+}
+/* Force iframe to fill button */
+.like_button iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.like_button.liked + .our_like_button {
+  color: #ff0000;
+}
+
+
 article img {
   width: 100%;
 }
