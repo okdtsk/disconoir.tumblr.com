@@ -43,7 +43,7 @@
     <meta name="image:Twitter OG Image" content="">
     <meta name="image:Mobile Icon" content="">
     <meta name="image:Favicon Png" content="">
-    <meta name="text:CommingUp" content="">
+    <meta name="text:HeaderText" content="">
     <meta name="color:TextColor" content="{TextColor}">
     <meta name="color:TextBlurColor" content="{TextBlurColor}">
     <style type="text/css">
@@ -101,12 +101,11 @@
       </header>
 
       {block:IndexPage}
-        {block:IfCommingUp}
-          <section id="commingup">
-            <h3>Comming Up Event</h3>
-            {text:commingUp}
+        {block:IfHeaderText}
+          <section id="headertext">
+            {text:HeaderText}
           </section>
-        {/block:IfCommingUp}
+        {/block:IfHeaderText}
       {/block:IndexPage}
 
       <section id="posts" class="autopagerize_page_element">
@@ -411,7 +410,7 @@
       </section>
       {block:Pagination}
         {block:PreviousPage}
-         <a href="{PreviousPage}">&lt;</a>
+         <a href="{PreviousPage}"><span class="glyphicon glyphicon-chevron-left"></span></a>
         {/block:PreviousPage}
         {block:JumpPagination length="5"}
           {block:CurrentPage}
@@ -422,7 +421,7 @@
           {/block:JumpPage}
         {/block:JumpPagination}
         {block:NextPage}
-          <a href="{NextPage}">&gt;</a>
+          <a href="{NextPage}"><span class="glyphicon glyphicon-chevron-right"></span></a>
         {/block:NextPage}
       {/block:Pagination}
     </div>
