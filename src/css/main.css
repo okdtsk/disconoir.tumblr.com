@@ -103,7 +103,7 @@ body {
   text-align: center;
   color: {color:TextColor};
   letter-spacing: 8px;
-  font-size: 12px;
+  font-size: 15px;
   font-family: "Helvetica Neue", 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro';
   word-break: break-all;
 }
@@ -185,7 +185,7 @@ article {
 }
 
 article > footer.postfooter {
-  font-size: 80%;
+  font-size: 50%;
   text-align: right;
   margin-top: 20px;
 }
@@ -215,7 +215,7 @@ br.mobile_only { display: none; }
 @media screen and (min-width: 2000px) { /* for Desktop */
   body {
     background-image: url('{image:Background Full}');
-    font-size: 24px;
+    font-size: 26px;
   }
   #contentswrapper {
     width: 100%;
@@ -234,12 +234,15 @@ br.mobile_only { display: none; }
   span.max_sequence {
     font-size: 28px;
   }
+  article > footer.postfooter {
+    font-size: 60%;
+  }
 }
 
 @media screen and (min-width: 1281px) { /* for Desktop */
   body {
     background-image: url('{image:Background Full}');
-    font-size: 20px;
+    font-size: 22px;
   }
   #contentswrapper {
     width: 100%;
@@ -258,12 +261,15 @@ br.mobile_only { display: none; }
   span.max_sequence {
     font-size: 28px;
   }
+  article > footer.postfooter {
+    font-size: 60%;
+  }
 }
 
 @media screen and (max-width: 1280px) { /* for iPad and Tablet */
   body {
     background-image: url('{image:Background Full}');
-    font-size: 18px;
+    font-size: 20px;
   }
   #contentswrapper {
     width: 100%;
@@ -282,12 +288,15 @@ br.mobile_only { display: none; }
   span.max_sequence {
     font-size: 28px;
   }
+  article > footer.postfooter {
+    font-size: 55%;
+  }
 }
 
 @media screen and (max-width: 1080px) { /* for iPad and Tablet */
   body {
     background-image: url('{image:Background Full}');
-    font-size: 16px;
+    font-size: 19px;
   }
   #contentswrapper {
     width: 100%;
@@ -306,13 +315,16 @@ br.mobile_only { display: none; }
   span.max_sequence {
     font-size: 28px;
   }
+  article > footer.postfooter {
+    font-size: 55%;
+  }
 }
 
 @media screen and (max-width: 750px) { /* for iPhone6 */
   br.mobile_only { display: inline; }
   body {
     background-image: url('{image:Background Mobile}');
-    font-size: 12px;
+    font-size: 18px;
   }
   #contentswrapper {
     width: 100%;

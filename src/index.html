@@ -258,11 +258,11 @@
                   </div>
                 </div>
                 <div class="rightfooter">
-                  <div class="source">
-                    {block:Source}
-                      via {Source}
-                    {/block:Source}
-                  </div>
+                  {block:Source}
+                    <div class="source">
+                        via {Source}
+                    </div>
+                  {/block:Source}
                   {block:HasTags}
                     <div class="tags">
                       {block:Tags}
