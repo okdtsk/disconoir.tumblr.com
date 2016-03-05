@@ -121,13 +121,13 @@
               </div>
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   {block:HasTags}
                     <div class="tags">
                       {block:Tags}
@@ -161,10 +161,7 @@
                 </header>
               {/block:PostSummary}
               <div class="image">
-                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-                {block:HighRes}
-                  <br /><a href="{PhotoURL-HighRes}">📷High Res</a>
-                {/block:HighRes}
+                <a href="{PhotoURL-HighRes}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
               </div>
               {block:Caption}
                 <div class="caption leftalign">
@@ -173,13 +170,13 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   {block:Exif}
                     <div class="exif">
                       {block:Camera}<span>{Camera}</span>{/block:Camera}<br />
@@ -246,13 +243,13 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   {block:HasTags}
                     <div class="tags">
                       {block:Tags}
@@ -290,13 +287,13 @@
               </div>
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   {block:Source}
                     <div class="source">
                         via {Source}
@@ -354,13 +351,13 @@
               {/block:Excerpt}
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   <div class="source">
                       via <a href="{URL}" {Target}>{Name}</a>
                   </div>
@@ -406,13 +403,13 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   <div class="trackinfo">
                     {block:Artist}<span class="artist">{Artist}</span>{/block:Artist}
                     {block:Album}<span class="album">{Album}</span>{/block:Album}
@@ -461,13 +458,13 @@
               {/block:Caption}
               <footer class="postfooter">
                 <div class="leftfooter">
+                </div>
+                <div class="rightfooter">
                   <ul class="buttons">
                     <li class="custom-like-button">{LikeButton size="15"}<span class="our_like_button glyphicon glyphicon-heart" aria-hidden="true"></span></li>
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                </div>
-                <div class="rightfooter">
                   <div class="playcount">
                     {PlayCountWithLabel}
                   </div>
