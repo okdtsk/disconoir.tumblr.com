@@ -218,7 +218,7 @@ ul.buttons > li {
 }
 
 ul.buttons .glyphicon:hover {
-  color: #ff9999;
+  color: rgba({RGBcolor:TextColor}, 0.7);
 }
 
 .custom-like-button {
