@@ -221,10 +221,25 @@ ul.buttons .glyphicon:hover {
   color: rgba({RGBcolor:TextColor}, 0.7);
 }
 
+.like_button:hover + .our_like_button {
+  color: rgba({RGBcolor:TextColor}, 0.7);
+}
+
+.like_button.liked + .our_like_button {
+  color: rgba({RGBcolor:TextColor}, 0.2);
+}
+
+.like_button.liked:hover + .our_like_button {
+  color: rgba({RGBcolor:TextColor}, 0.4);
+}
+
+ul.buttons li {
+  cursor: pointer;
+}
+
 .custom-like-button {
   position: relative;
   display: block;
-  cursor: pointer;
 }
 
 /* class for the Tumblr Like Button iframe */
@@ -245,9 +260,6 @@ ul.buttons .glyphicon:hover {
   height: 100% !important;
 }
 
-.like_button.liked + .our_like_button {
-  color: #ff0000;
-}
 
 
 article img {
