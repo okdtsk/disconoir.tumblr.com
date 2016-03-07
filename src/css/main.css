@@ -160,11 +160,6 @@ a.nodashed {
     margin-right: 0px;
 }
 
-a:active,
-a:hover {
-  outline: 0;
-}
-
 ul {
   padding: 0;
   list-style-type: none;

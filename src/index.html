@@ -161,7 +161,7 @@
                 </header>
               {/block:PostSummary}
               <div class="image">
-                <a href="{PhotoURL-HighRes}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
+                <a href="{PhotoURL-HighRes}" class="nodashed"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
               </div>
               {block:Caption}
                 <div class="caption leftalign">
@@ -219,10 +219,7 @@
               {/block:PostSummary}
               {block:Photos}
                 <div class="image">
-                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-                  {block:HighRes}
-                    <br /><a href="{PhotoURL-HighRes}">📷High Res</a>
-                  {/block:HighRes}
+                  <a href="{PhotoURL-HighRes}" class="nodashed"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
                 </div>
                 {block:Caption}
                   <div class="caption leftalign">
