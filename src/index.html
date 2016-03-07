@@ -177,14 +177,6 @@
                     <li class="custom-reblog-button"><a href="{ReblogURL}" class="nodashed"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></a></span></li>
                     <li class="short-permalink"><a href="{ShortURL}" class="nodashed"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a></li>
                   </ul>
-                  {block:Exif}
-                    <div class="exif">
-                      {block:Camera}<span>{Camera}</span>{/block:Camera}<br />
-                      {block:Aperture}<span>{Aperture}</span>{/block:Aperture}
-                      {block:Exposure}<span>{Exposure}</span>{/block:Exposure}
-                      {block:FocalLength}<span>{FocalLength}</span>{/block:FocalLength}
-                    </div>
-                  {/block:Exif}
                   {block:HasTags}
                     <div class="tags">
                       {block:Tags}
@@ -226,14 +218,6 @@
                     {Caption}
                   </div>
                 {/block:Caption}
-                {block:Exif}
-                  <div class="exif">
-                    {block:Camera}<span>{Camera}</span>{/block:Camera} <br />
-                    {block:Aperture}<span>{Aperture}</span>{/block:Aperture}
-                    {block:Exposure}<span>{Exposure}</span>{/block:Exposure}
-                    {block:FocalLength}<span>{FocalLength}</span>{/block:FocalLength}
-                  </div>
-                {/block:Exif}
               {/block:Photos}
               {block:Caption}
                 {Caption}
